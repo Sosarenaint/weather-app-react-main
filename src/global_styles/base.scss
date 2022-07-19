@@ -1,0 +1,36 @@
+@import 'mixins';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+html {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --day-body-color: #336996;
+  --night-body-color: #49407a;
+  --current-time-color: var(--day-body-color);
+}
+
+* {
+  @include line-height(1);
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.app-container {
+  background: var(--current-time-color);
+  height: 100vh;
+}
+
+.app-wrapper {
+  border-radius: 10px;
+  display: flex;
+  overflow: hidden;
+  width: 1000px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

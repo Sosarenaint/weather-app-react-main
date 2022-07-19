@@ -1,0 +1,65 @@
+@import '../../../global_styles/typography';
+
+.contentContainer {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.weekdayTitle {
+  @extend %typescale-1;
+  @include margin-top(0);
+  @include margin-bottom(0);
+  line-height: 9rem;
+}
+
+.dateSubtitle {
+  @extend %typescale-5;
+  @include margin-top(0);
+  @include margin-bottom(1);
+}
+
+.hourlyList,
+.hourlyItem {
+  background: rgba(black, 0.3);
+  border-radius: 10px;
+}
+
+.hourlyList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding-top: 16px;
+  max-width: 512px;
+}
+
+.hourlyItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 8px 24px;
+  padding: 8px;
+  width: 112px;
+}
+
+.itemTime {
+  font-weight: bold;
+}
+
+.tempText {
+  @extend %typescale-5;
+  @include margin-bottom(0);
+  @include margin-top(0);
+  line-height: 1
+}
+
+.weatherIcon {
+  $vertical-margin: 0.25;
+  @extend %typescale-4;
+  @include margin-bottom($vertical-margin);
+  @include margin-top($vertical-margin);
+  line-height: 1;
+}

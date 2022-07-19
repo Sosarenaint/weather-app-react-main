@@ -1,0 +1,55 @@
+@import '../../../global_styles/variables';
+@import '../../../global_styles/typography.scss';
+
+.contentContainer {
+  background: rgba(black, 0.3);
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.sectionTitle {
+  @extend %typescale-5;
+  @include margin-top(0);
+  @include margin-bottom(1);
+}
+
+.currTemp {
+  @extend %typescale-1;
+  @include margin-top(0);
+  @include margin-bottom(1);
+  line-height: 1;
+
+  i {
+    margin-left: -16px;
+  }
+}
+
+.weatherIcon {
+  @extend %typescale-1;
+  @include margin-top(0);
+  line-height: 1;
+}
+
+.weekDay,
+.fullDate {
+  @extend %typescale-4;
+  @include margin-top(0);
+}
+
+.currentOutlookBtn {
+  background: #aaa;
+  border-radius: 31px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  padding: calc((44px - #{$line-height + 'rem'}) / 2) 16px;
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+}
